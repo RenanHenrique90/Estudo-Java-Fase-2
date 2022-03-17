@@ -14,15 +14,17 @@ public class Aluno {
 	String nomeEscola;
 	String serieMatriculado;
 	
-	
+	//objeto que não retorna parametros padrão definido
 	public Aluno() {
 		
 	}
 	
+	//objeto que recebe parametros padrão definido (String)
 	public Aluno(String nomePadrao) {
 		nome =  nomePadrao;
 	}
 	
+	//objeto que recebe dois parametros padrão (String, int)
 	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
