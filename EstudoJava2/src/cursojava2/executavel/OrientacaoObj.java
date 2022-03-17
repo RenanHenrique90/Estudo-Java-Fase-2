@@ -20,10 +20,24 @@ public class OrientacaoObj {
 		aluno1.setDataMatricula("13/03/2022");
 		aluno1.setNomeEscola("JDEV Treinamento");
 		aluno1.setSerieMatriculado("Quinta Serie");
+		aluno1.setNota1(85);
+		aluno1.setNota2(85);
+		aluno1.setNota3(90);
+		aluno1.setNota4(95);
 		
 		System.out.println("Nome: " + aluno1.getNome());
 		System.out.println("Idade: " + aluno1.getIdade());
 		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
+		
+		if (aluno1.getMediaAluno() >= 50) {
+			if (aluno1.getMediaAluno() > 80) {
+				System.out.println("Parabens voce foi aprovado! Sua media foi excelente: " + aluno1.getMediaAluno());
+			}else {
+				System.out.println("Voce ficou em repescagem! Sua media foi: " + aluno1.getMediaAluno());
+			}
+		}else {
+			System.out.println("Infelizmente voce não foi aprovado" + aluno1.getMediaAluno());
+		}
 		
 		//==================================================================================
 		System.out.println("-----------------------------------------------------");
@@ -38,10 +52,25 @@ public class OrientacaoObj {
 		aluno2.setDataMatricula("13/03/2022");
 		aluno2.setNomeEscola("JDEV Treinamento");
 		aluno2.setSerieMatriculado("Quinta Serie");
+		aluno2.setNota1(80);
+		aluno2.setNota2(75);
+		aluno2.setNota3(90);
+		aluno2.setNota4(95);
 		
 		System.out.println("Nome: " + aluno2.getNome());
 		System.out.println("Idade: " + aluno2.getIdade());
 		System.out.println("Data nascimento: " + aluno2.getDataNascimento());
+		
+		if (aluno2.getMediaAluno() >= 50) {
+			if (aluno2.getMediaAluno() > 80) {
+				System.out.println("Parabens voce foi aprovado! Sua media foi excelente: " + aluno2.getMediaAluno());
+			}else {
+				System.out.println("Voce ficou em repescagem! Sua media foi: " + aluno2.getMediaAluno());
+			}
+		}else {
+			System.out.println("Infelizmente voce não foi aprovado" + aluno2.getMediaAluno());
+		}
+		
 		
 		//==================================================================================
 		System.out.println("-----------------------------------------------------");
@@ -55,10 +84,24 @@ public class OrientacaoObj {
 		aluno3.setDataMatricula("13/03/2022");
 		aluno3.setNomeEscola("JDEV Treinamento");
 		aluno3.setSerieMatriculado("Quinta Serie");
+		aluno3.setNota1(50);
+		aluno3.setNota2(60);
+		aluno3.setNota3(75);
+		aluno3.setNota4(95);
 		
 		System.out.println("Nome: " + aluno3.getNome());
 		System.out.println("Idade: " + aluno3.getIdade());
 		System.out.println("Data nascimento: " + aluno3.getDataNascimento());
+		
+		if (aluno3.getMediaAluno() >= 50) {
+			if (aluno3.getMediaAluno() > 80) {
+				System.out.println("Parabens voce foi aprovado! Sua media foi excelente: " + aluno3.getMediaAluno());
+			}else {
+				System.out.println("Voce ficou em repescagem! Sua media foi: " + aluno3.getMediaAluno());
+			}
+		}else {
+			System.out.println("Infelizmente voce não foi aprovado" + aluno3.getMediaAluno());
+		}
 		
 		//==================================================================================
 		System.out.println("-----------------------------------------------------");
@@ -71,10 +114,24 @@ public class OrientacaoObj {
 		aluno4.setDataMatricula("13/03/2022");
 		aluno4.setNomeEscola("JDEV Treinamento");
 		aluno4.setSerieMatriculado("Quinta Serie");
+		aluno4.setNota1(80);
+		aluno4.setNota2(50);
+		aluno4.setNota3(30);
+		aluno4.setNota4(20);
 		
 		System.out.println("Nome: " + aluno4.getNome());
 		System.out.println("Idade: " + aluno4.getIdade());
 		System.out.println("Data nascimento: " + aluno4.getDataNascimento());
+		
+		if (aluno4.getMediaAluno() >= 50) {
+			if (aluno4.getMediaAluno() > 80) {
+				System.out.println("Parabens voce foi aprovado! Sua media foi excelente: " + aluno4.getMediaAluno());
+			}else {
+				System.out.println("Voce ficou em repescagem! Sua media foi: " + aluno4.getMediaAluno());
+			}
+		}else {
+			System.out.println("Infelizmente voce não foi aprovado" + aluno4.getMediaAluno());
+		}
 	
 	}
 	
