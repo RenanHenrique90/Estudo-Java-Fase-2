@@ -146,9 +146,20 @@ public class Aluno {
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
-	
+	 
 	public double getMediaAluno() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+	
+	//getAlunoAprovado() retorna true para "Aprovado" e false para "Reprovado"
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaAluno();
+		
+		if(media >= 50) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }

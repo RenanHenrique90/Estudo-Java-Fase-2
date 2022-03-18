@@ -8,7 +8,7 @@ public class OrientacaoObj {
 		
 		/* aluno1, aluno2, aluno3 e aluno4, são referencias do Objeto criado e,
 		 * new Aluno(); é a instancia (criação do objeto da referencia) 
-		 */
+		
 		Aluno aluno1 = new Aluno();//Sem parametros definodos
 		aluno1.setNome("Renan Henrique");
 		aluno1.setIdade(31);
@@ -40,6 +40,7 @@ public class OrientacaoObj {
 		}
 		
 		//==================================================================================
+		
 		System.out.println("-----------------------------------------------------");
 		Aluno aluno2 = new Aluno();
 		aluno2.setNome("Julia");
@@ -131,8 +132,28 @@ public class OrientacaoObj {
 			}
 		}else {
 			System.out.println("Infelizmente voce não foi aprovado" + aluno4.getMediaAluno());
-		}
-	
+		}*/
+		
+		Aluno aluno1 = new Aluno();//Sem parametros definodos
+		aluno1.setNome("Renan Henrique");
+		aluno1.setIdade(31);
+		aluno1.setDataNascimento("03/09/1990");
+		aluno1.setRegistroGeral("4892384928");
+		aluno1.setNumeroCpf("98392849");
+		aluno1.setNomeMae("Guilhermina");
+		aluno1.setNomePai("Jorge");
+		aluno1.setDataMatricula("13/03/2022");
+		aluno1.setNomeEscola("JDEV Treinamento");
+		aluno1.setSerieMatriculado("Quinta Serie");
+		aluno1.setNota1(50);
+		aluno1.setNota2(50);
+		aluno1.setNota3(30);
+		aluno1.setNota4(45);
+		
+		System.out.println("Nome: " + aluno1.getNome());
+		System.out.println("Idade: " + aluno1.getIdade());
+		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
+		System.out.println("Parabens voce foi " + (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
 	}
 	
 }
