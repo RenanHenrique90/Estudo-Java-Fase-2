@@ -1,5 +1,7 @@
 package cursojava2.executavel;
 
+import javax.swing.JOptionPane;
+
 import cursojava2.classes.Aluno;
 
 public class OrientacaoObj {
@@ -134,26 +136,42 @@ public class OrientacaoObj {
 			System.out.println("Infelizmente voce não foi aprovado" + aluno4.getMediaAluno());
 		}*/
 		
+		String nome = JOptionPane.showInputDialog("Digite o nome do Aluno: ");
+		String idade = JOptionPane.showInputDialog("Digite a idade do Aluno: ");
+		String dataNascimento = JOptionPane.showInputDialog("Data de Nascimento do Aluno: ");
+		String rg = JOptionPane.showInputDialog("Digite o Registro Geral do Aluno: ");
+		String numeroCpf = JOptionPane.showInputDialog("Digite o numero do CPF do Aluno: ");
+		String nomeMae = JOptionPane.showInputDialog("Digite o nome da mãe do Aluno: ");
+		String nomePai = JOptionPane.showInputDialog("Digite o nome do pai do Aluno: ");
+		String dataMatricula = JOptionPane.showInputDialog("Digite a data de matricula do Aluno: ");
+		String escola = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
+		String serieMatriculado = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
+		String nota1 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
+		String nota2 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
+		String nota3 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
+		String nota4 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
+		
+		
+		
 		Aluno aluno1 = new Aluno();//Sem parametros definodos
-		aluno1.setNome("Renan Henrique");
-		aluno1.setIdade(31);
-		aluno1.setDataNascimento("03/09/1990");
-		aluno1.setRegistroGeral("4892384928");
-		aluno1.setNumeroCpf("98392849");
-		aluno1.setNomeMae("Guilhermina");
-		aluno1.setNomePai("Jorge");
-		aluno1.setDataMatricula("13/03/2022");
-		aluno1.setNomeEscola("JDEV Treinamento");
-		aluno1.setSerieMatriculado("Quinta Serie");
-		aluno1.setNota1(50);
-		aluno1.setNota2(50);
-		aluno1.setNota3(30);
-		aluno1.setNota4(45);
+		aluno1.setNome(nome);
+		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setDataNascimento(dataNascimento);
+		aluno1.setRegistroGeral(rg);
+		aluno1.setNumeroCpf(numeroCpf);
+		aluno1.setNomeMae(nomeMae);
+		aluno1.setNomePai(nomePai);
+		aluno1.setDataMatricula(dataMatricula);
+		aluno1.setNomeEscola(escola);
+		aluno1.setSerieMatriculado(serieMatriculado);
+		aluno1.setNota1(Double.parseDouble(nota1));
+		aluno1.setNota2(Double.parseDouble(nota2));
+		aluno1.setNota3(Double.parseDouble(nota3));
+		aluno1.setNota4(Double.parseDouble(nota4));
 		
 		System.out.println("Nome: " + aluno1.getNome());
 		System.out.println("Idade: " + aluno1.getIdade());
 		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
 		System.out.println("Parabens voce foi " + (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
 	}
-	
 }
