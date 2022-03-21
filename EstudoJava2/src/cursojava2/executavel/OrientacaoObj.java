@@ -169,9 +169,8 @@ public class OrientacaoObj {
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
 		
-		System.out.println("Nome: " + aluno1.getNome());
-		System.out.println("Idade: " + aluno1.getIdade());
-		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
-		System.out.println("Parabens voce foi " + (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
+		System.out.println(aluno1.toString());
+		System.out.println("Média do aluno: " + aluno1.getMediaAluno() +"\nO Aluno foi " 
+		+ (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
 	}
 }

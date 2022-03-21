@@ -146,20 +146,29 @@ public class Aluno {
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
-	 
+
 	public double getMediaAluno() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
-	
-	//getAlunoAprovado() retorna true para "Aprovado" e false para "Reprovado"
+
+	// getAlunoAprovado() retorna true para "Aprovado" e false para "Reprovado"
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaAluno();
-		
-		if(media >= 50) {
+
+		if (media >= 50) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
+
+	
+	public String toString() {
+		return "Aluno [\nnome = " + nome + "\nIdade = " + idade + "\nData de Nascimento = " + dataNascimento + "\nRegistro Geral = "
+				+ registroGeral + "\nNumero do CPF = " + numeroCpf + "\nNome da Mãe = " + nomeMae + "\nNome do Pai = " + nomePai
+				+ "\nData da Matricula = " + dataMatricula + "\nNome da Escola = " + nomeEscola + "\nSerie do Aluno = " + serieMatriculado
+				+ "\nNota 1 = " + nota1 + ", Nota 2 = " + nota2 + ", Nota 3 = " + nota3 + ", Nota 4 = " + nota4 + "]";
+	}
+	
 
 }
