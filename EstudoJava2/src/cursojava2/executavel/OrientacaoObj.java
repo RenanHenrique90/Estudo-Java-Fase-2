@@ -136,7 +136,7 @@ public class OrientacaoObj {
 			System.out.println("Infelizmente voce não foi aprovado" + aluno4.getMediaAluno());
 		}*/
 		
-		String nome = JOptionPane.showInputDialog("Digite o nome do Aluno: ");
+		String nome = JOptionPane.showInputDialog("Digite o nome do Aluno1: ");
 		String idade = JOptionPane.showInputDialog("Digite a idade do Aluno: ");
 		String dataNascimento = JOptionPane.showInputDialog("Data de Nascimento do Aluno: ");
 		String rg = JOptionPane.showInputDialog("Digite o Registro Geral do Aluno: ");
@@ -146,10 +146,18 @@ public class OrientacaoObj {
 		String dataMatricula = JOptionPane.showInputDialog("Digite a data de matricula do Aluno: ");
 		String escola = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
 		String serieMatriculado = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
-		String nota1 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
-		String nota2 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
-		String nota3 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
-		String nota4 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
+		
+		String disciplina1 = JOptionPane.showInputDialog("Digite a disciplina 1:");
+		String nota1Aluno1 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Digite a disciplina 2:");
+		String nota2Aluno1 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Digite a disciplina 3:");
+		String nota3Aluno1 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Digite a disciplina 4:");
+		String nota4Aluno1 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
 		
 		
 		
@@ -164,13 +172,80 @@ public class OrientacaoObj {
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNota1(Double.parseDouble(nota1));
-		aluno1.setNota2(Double.parseDouble(nota2));
-		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setNota4(Double.parseDouble(nota4));
+		
+		
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);
+		
+		aluno1.setNota1(Double.parseDouble(nota1Aluno1));
+		aluno1.setNota2(Double.parseDouble(nota2Aluno1));
+		aluno1.setNota3(Double.parseDouble(nota3Aluno1));
+		aluno1.setNota4(Double.parseDouble(nota4Aluno1));
 		
 		System.out.println(aluno1.toString());
-		System.out.println("Média do aluno: " + aluno1.getMediaAluno() +"\nO Aluno foi " 
+		System.out.println("Média do aluno: " + aluno1.getMediaAluno() + "\nO Aluno foi " 
 		+ (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
+		
+		System.out.println("============================================================================");
+		
+		String nome2 = JOptionPane.showInputDialog("Digite o nome do Aluno2: ");
+		String idade2 = JOptionPane.showInputDialog("Digite a idade do Aluno: ");
+		String dataNascimento2 = JOptionPane.showInputDialog("Data de Nascimento do Aluno: ");
+		String rg2 = JOptionPane.showInputDialog("Digite o Registro Geral do Aluno: ");
+		String numeroCpf2 = JOptionPane.showInputDialog("Digite o numero do CPF do Aluno: ");
+		String nomeMae2 = JOptionPane.showInputDialog("Digite o nome da mãe do Aluno: ");
+		String nomePai2 = JOptionPane.showInputDialog("Digite o nome do pai do Aluno: ");
+		String dataMatricula2 = JOptionPane.showInputDialog("Digite a data de matricula do Aluno: ");
+		String escola2 = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
+		String serieMatriculado2 = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
+		
+		String disciplina1Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 1:");
+		String nota1Aluno2 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
+		
+		String disciplina2Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 2:");
+		String nota2Aluno2 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
+		
+		String disciplina3Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 3:");
+		String nota3Aluno2 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
+		
+		String disciplina4Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 4:");
+		String nota4Aluno2 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
+		
+		
+		
+		Aluno aluno2 = new Aluno();//Sem parametros definodos
+		aluno2.setNome(nome2);
+		aluno2.setIdade(Integer.valueOf(idade2));
+		aluno2.setDataNascimento(dataNascimento2);
+		aluno2.setRegistroGeral(rg2);
+		aluno2.setNumeroCpf(numeroCpf2);
+		aluno2.setNomeMae(nomeMae2);
+		aluno2.setNomePai(nomePai2);
+		aluno2.setDataMatricula(dataMatricula2);
+		aluno2.setNomeEscola(escola2);
+		aluno2.setSerieMatriculado(serieMatriculado2);
+		
+		aluno2.setDisciplina1(disciplina1Aluno2);
+		aluno2.setDisciplina2(disciplina2Aluno2);
+		aluno2.setDisciplina3(disciplina3Aluno2);
+		aluno2.setDisciplina4(disciplina4Aluno2);
+		
+		aluno2.setNota1(Double.parseDouble(nota1Aluno2));
+		aluno2.setNota2(Double.parseDouble(nota2Aluno2));
+		aluno2.setNota3(Double.parseDouble(nota3Aluno2));
+		aluno2.setNota4(Double.parseDouble(nota4Aluno2));
+		
+		System.out.println(aluno2.toString());
+		System.out.println("Média do aluno: " + aluno2.getMediaAluno() +"\nO Aluno foi " 
+		+ (aluno2.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
+		
+		if(aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais");
+		}
+		else {
+			System.out.println("Alunos não são iguais");
+		}
 	}
 }

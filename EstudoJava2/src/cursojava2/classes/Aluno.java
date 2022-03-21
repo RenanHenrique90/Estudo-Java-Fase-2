@@ -1,5 +1,7 @@
 package cursojava2.classes;
 
+import java.util.Objects;
+
 /*Esta é nossa classe/objeto que representa o Aluno
  *Ela contem os atribudos dos Objetos instanciados/referenciados */
 public class Aluno {
@@ -14,11 +16,45 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	
+	String disciplina1;
 	double nota1;
+	
+	String disciplina2;
 	double nota2;
+	
+	String disciplina3;
 	double nota3;
+	
+	String disciplina4;
 	double nota4;
-
+	
+	
+	public String getDisciplina1() {
+		return disciplina1;
+	}
+	public void setDisciplina1 (String disciplina1) {
+		this.disciplina1 = disciplina1;
+	}
+	public String getDisciplica2() {
+		return disciplina2;
+	}
+	public void setDisciplina2(String disciplina2) {
+		this.disciplina2 = disciplina2;
+	}
+	public String getDisciplina3() {
+		return disciplina3;
+	}
+	public void setDisciplina3(String disciplina3) {
+		this.disciplina3 = disciplina3;
+	}
+	public String setDisciplina4() {
+		return disciplina4;
+	}
+	public void setDisciplina4(String disciplina4) {
+		this.disciplina4 = disciplina4;
+	}
+	
 	public double getNota1() {
 		return nota1;
 	}
@@ -166,9 +202,28 @@ public class Aluno {
 	public String toString() {
 		return "Aluno [\nnome = " + nome + "\nIdade = " + idade + "\nData de Nascimento = " + dataNascimento + "\nRegistro Geral = "
 				+ registroGeral + "\nNumero do CPF = " + numeroCpf + "\nNome da Mãe = " + nomeMae + "\nNome do Pai = " + nomePai
-				+ "\nData da Matricula = " + dataMatricula + "\nNome da Escola = " + nomeEscola + "\nSerie do Aluno = " + serieMatriculado
-				+ "\nNota 1 = " + nota1 + ", Nota 2 = " + nota2 + ", Nota 3 = " + nota3 + ", Nota 4 = " + nota4 + "]";
+				+ "Data da Matricula = " + dataMatricula + "\nNome da Escola = " + nomeEscola + "\nSerie do Aluno = " + serieMatriculado
+				+ " \nDisciplina 1: " + disciplina1 + " Nota  " + nota1 + " \nDisciplina 2: "+ disciplina2 + " Nota   " + nota2 
+				+ " \nDisciplina 3: " + disciplina3 + " Nota  " + nota3 + " \nDisciplina 4:  " + disciplina4 +" Nota   " + nota4 + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf, registroGeral);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf)
+				&& Objects.equals(registroGeral, other.registroGeral);
 	}
 	
-
+	
 }
