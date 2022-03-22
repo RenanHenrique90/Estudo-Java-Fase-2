@@ -1,5 +1,7 @@
 package cursojava2.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /*Esta é nossa classe/objeto que representa o Aluno
@@ -17,14 +19,14 @@ public class Aluno {
 	String nomeEscola;
 	String serieMatriculado;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 
 	// objeto que não retorna parametros padrão definido
@@ -124,7 +126,14 @@ public class Aluno {
 	}
 
 	public double getMediaAluno() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+		
+		double somaNotas = 0.0;
+		
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		
+		return somaNotas / disciplinas.size();
 	}
 
 	// getAlunoAprovado() retorna true para "Aprovado" e false para "Reprovado"
@@ -146,7 +155,7 @@ public class Aluno {
 		return "Aluno Nome: " + nome + "\nIdade: " + idade + "\nData de Nascimento: " + dataNascimento + "\nRG: "
 				+ registroGeral + "\nCPF: " + numeroCpf + "\nNome da Mae: " + nomeMae + "\nNome do Pai: " + nomePai
 				+ "\nData da Matricula: " + dataMatricula + "\nNome da Escola: " + nomeEscola + "\nSérie: "
-				+ serieMatriculado  + disciplina + "";
+				+ serieMatriculado  + disciplinas +"";
 	}
 
 	@Override

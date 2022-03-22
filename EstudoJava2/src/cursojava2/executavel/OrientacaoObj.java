@@ -3,6 +3,7 @@ package cursojava2.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava2.classes.Aluno;
+import cursojava2.classes.Disciplina;
 
 public class OrientacaoObj {
     
@@ -147,17 +148,7 @@ public class OrientacaoObj {
 		String escola = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
 		String serieMatriculado = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
 		
-		String disciplina1 = JOptionPane.showInputDialog("Digite a disciplina 1:");
-		String nota1Aluno1 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
 		
-		String disciplina2 = JOptionPane.showInputDialog("Digite a disciplina 2:");
-		String nota2Aluno1 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
-		
-		String disciplina3 = JOptionPane.showInputDialog("Digite a disciplina 3:");
-		String nota3Aluno1 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
-		
-		String disciplina4 = JOptionPane.showInputDialog("Digite a disciplina 4:");
-		String nota4Aluno1 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
 		
 		
 		
@@ -173,16 +164,26 @@ public class OrientacaoObj {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serieMatriculado);
 		
+		Disciplina disciplina1Aluno1 = new Disciplina();
+		disciplina1Aluno1.setDisciplina("Logica de Programação");
+		disciplina1Aluno1.setNota(100);
 		
-		aluno1.getDisciplina().setDisciplina1(disciplina1);
-		aluno1.getDisciplina().setDisciplina2(disciplina2);
-		aluno1.getDisciplina().setDisciplina3(disciplina3);
-		aluno1.getDisciplina().setDisciplina4(disciplina4);
+		Disciplina disciplina2Aluno1 = new Disciplina();
+		disciplina2Aluno1.setDisciplina("Estrutura de Dados");
+		disciplina2Aluno1.setNota(100);
 		
-		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1Aluno1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2Aluno1));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3Aluno1));
-		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4Aluno1));
+		Disciplina disciplina3Aluno1 = new Disciplina();
+		disciplina3Aluno1.setDisciplina("POO");
+		disciplina3Aluno1.setNota(100);
+		
+		Disciplina disciplina4Aluno1 = new Disciplina();
+		disciplina4Aluno1.setDisciplina("Banco de Dados");
+		disciplina4Aluno1.setNota(100);
+		
+		aluno1.getDisciplinas().add(disciplina1Aluno1);
+		aluno1.getDisciplinas().add(disciplina2Aluno1);
+		aluno1.getDisciplinas().add(disciplina3Aluno1);
+		aluno1.getDisciplinas().add(disciplina4Aluno1);
 		
 		System.out.println(aluno1.toString());
 		System.out.println("Média do aluno: " + aluno1.getMediaAluno() + "\nO Aluno foi " 
@@ -201,18 +202,6 @@ public class OrientacaoObj {
 		String escola2 = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
 		String serieMatriculado2 = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
 		
-		String disciplina1Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 1:");
-		String nota1Aluno2 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
-		
-		String disciplina2Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 2:");
-		String nota2Aluno2 = JOptionPane.showInputDialog("Digite a segunda nota do Aluno: ");
-		
-		String disciplina3Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 3:");
-		String nota3Aluno2 = JOptionPane.showInputDialog("Digite a terceira do Aluno: ");
-		
-		String disciplina4Aluno2 = JOptionPane.showInputDialog("Digite a disciplina 4:");
-		String nota4Aluno2 = JOptionPane.showInputDialog("Digite a quarta do Aluno: ");
-		
 		
 		
 		Aluno aluno2 = new Aluno();//Sem parametros definodos
@@ -227,15 +216,26 @@ public class OrientacaoObj {
 		aluno2.setNomeEscola(escola2);
 		aluno2.setSerieMatriculado(serieMatriculado2);
 		
-		aluno2.getDisciplina().setDisciplina1(disciplina1Aluno2);
-		aluno2.getDisciplina().setDisciplina2(disciplina2Aluno2);
-		aluno2.getDisciplina().setDisciplina3(disciplina3Aluno2);
-		aluno2.getDisciplina().setDisciplina4(disciplina4Aluno2);
+		Disciplina disciplina1Aluno2 = new Disciplina();
+		disciplina1Aluno2.setDisciplina("Logica de Programação");
+		disciplina1Aluno2.setNota(100);
 		
-		aluno2.getDisciplina().setNota1(Double.parseDouble(nota1Aluno2));
-		aluno2.getDisciplina().setNota2(Double.parseDouble(nota2Aluno2));
-		aluno2.getDisciplina().setNota3(Double.parseDouble(nota3Aluno2));
-		aluno2.getDisciplina().setNota4(Double.parseDouble(nota4Aluno2));
+		Disciplina disciplina2Aluno2 = new Disciplina();
+		disciplina2Aluno2.setDisciplina("Estrutura de Dados");
+		disciplina2Aluno2.setNota(100);
+		
+		Disciplina disciplina3Aluno2 = new Disciplina();
+		disciplina3Aluno2.setDisciplina("POO");
+		disciplina3Aluno2.setNota(100);
+		
+		Disciplina disciplina4Aluno2 = new Disciplina();
+		disciplina4Aluno2.setDisciplina("Banco de Dados");
+		disciplina4Aluno2.setNota(100);
+		
+		aluno2.getDisciplinas().add(disciplina1Aluno2);
+		aluno2.getDisciplinas().add(disciplina2Aluno2);
+		aluno2.getDisciplinas().add(disciplina3Aluno2);
+		aluno2.getDisciplinas().add(disciplina4Aluno2);
 		
 		System.out.println(aluno2.toString());
 		System.out.println("Média do aluno: " + aluno2.getMediaAluno() +"\nO Aluno foi " 
