@@ -1,6 +1,7 @@
 package cursojava2.executavel;
 
 import javax.swing.JOptionPane;
+import javax.swing.text.Position;
 
 import cursojava2.classes.Aluno;
 import cursojava2.classes.Disciplina;
@@ -164,88 +165,20 @@ public class OrientacaoObj {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serieMatriculado);
 		
-		Disciplina disciplina1Aluno1 = new Disciplina();
-		disciplina1Aluno1.setDisciplina("Logica de Programação");
-		disciplina1Aluno1.setNota(100);
-		
-		Disciplina disciplina2Aluno1 = new Disciplina();
-		disciplina2Aluno1.setDisciplina("Estrutura de Dados");
-		disciplina2Aluno1.setNota(100);
-		
-		Disciplina disciplina3Aluno1 = new Disciplina();
-		disciplina3Aluno1.setDisciplina("POO");
-		disciplina3Aluno1.setNota(100);
-		
-		Disciplina disciplina4Aluno1 = new Disciplina();
-		disciplina4Aluno1.setDisciplina("Banco de Dados");
-		disciplina4Aluno1.setNota(100);
-		
-		aluno1.getDisciplinas().add(disciplina1Aluno1);
-		aluno1.getDisciplinas().add(disciplina2Aluno1);
-		aluno1.getDisciplinas().add(disciplina3Aluno1);
-		aluno1.getDisciplinas().add(disciplina4Aluno1);
+		for(int pos = 1; pos <= 4; pos++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina "+ pos + "?");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da Disciplina "+ pos + "?");
+			
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
 		System.out.println(aluno1.toString());
 		System.out.println("Média do aluno: " + aluno1.getMediaAluno() + "\nO Aluno foi " 
 		+ (aluno1.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
 		
-		System.out.println("============================================================================");
-		
-		String nome2 = JOptionPane.showInputDialog("Digite o nome do Aluno2: ");
-		String idade2 = JOptionPane.showInputDialog("Digite a idade do Aluno: ");
-		String dataNascimento2 = JOptionPane.showInputDialog("Data de Nascimento do Aluno: ");
-		String rg2 = JOptionPane.showInputDialog("Digite o Registro Geral do Aluno: ");
-		String numeroCpf2 = JOptionPane.showInputDialog("Digite o numero do CPF do Aluno: ");
-		String nomeMae2 = JOptionPane.showInputDialog("Digite o nome da mãe do Aluno: ");
-		String nomePai2 = JOptionPane.showInputDialog("Digite o nome do pai do Aluno: ");
-		String dataMatricula2 = JOptionPane.showInputDialog("Digite a data de matricula do Aluno: ");
-		String escola2 = JOptionPane.showInputDialog("Digite a escola do Aluno: ");
-		String serieMatriculado2 = JOptionPane.showInputDialog("Digite a serie do Aluno: ");
-		
-		
-		
-		Aluno aluno2 = new Aluno();//Sem parametros definodos
-		aluno2.setNome(nome2);
-		aluno2.setIdade(Integer.valueOf(idade2));
-		aluno2.setDataNascimento(dataNascimento2);
-		aluno2.setRegistroGeral(rg2);
-		aluno2.setNumeroCpf(numeroCpf2);
-		aluno2.setNomeMae(nomeMae2);
-		aluno2.setNomePai(nomePai2);
-		aluno2.setDataMatricula(dataMatricula2);
-		aluno2.setNomeEscola(escola2);
-		aluno2.setSerieMatriculado(serieMatriculado2);
-		
-		Disciplina disciplina1Aluno2 = new Disciplina();
-		disciplina1Aluno2.setDisciplina("Logica de Programação");
-		disciplina1Aluno2.setNota(100);
-		
-		Disciplina disciplina2Aluno2 = new Disciplina();
-		disciplina2Aluno2.setDisciplina("Estrutura de Dados");
-		disciplina2Aluno2.setNota(100);
-		
-		Disciplina disciplina3Aluno2 = new Disciplina();
-		disciplina3Aluno2.setDisciplina("POO");
-		disciplina3Aluno2.setNota(100);
-		
-		Disciplina disciplina4Aluno2 = new Disciplina();
-		disciplina4Aluno2.setDisciplina("Banco de Dados");
-		disciplina4Aluno2.setNota(100);
-		
-		aluno2.getDisciplinas().add(disciplina1Aluno2);
-		aluno2.getDisciplinas().add(disciplina2Aluno2);
-		aluno2.getDisciplinas().add(disciplina3Aluno2);
-		aluno2.getDisciplinas().add(disciplina4Aluno2);
-		
-		System.out.println(aluno2.toString());
-		System.out.println("Média do aluno: " + aluno2.getMediaAluno() +"\nO Aluno foi " 
-		+ (aluno2.getAlunoAprovado() ? "Aprovado!"  : "Reporvado"));
-		
-		if(aluno1.equals(aluno2)) {
-			System.out.println("Alunos são iguais");
-		}
-		else {
-			System.out.println("Alunos não são iguais");
-		}
 	}
 }
