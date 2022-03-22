@@ -174,15 +174,15 @@ public class OrientacaoObj {
 		aluno1.setSerieMatriculado(serieMatriculado);
 		
 		
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setDisciplina4(disciplina4);
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);
 		
-		aluno1.setNota1(Double.parseDouble(nota1Aluno1));
-		aluno1.setNota2(Double.parseDouble(nota2Aluno1));
-		aluno1.setNota3(Double.parseDouble(nota3Aluno1));
-		aluno1.setNota4(Double.parseDouble(nota4Aluno1));
+		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1Aluno1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2Aluno1));
+		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3Aluno1));
+		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4Aluno1));
 		
 		System.out.println(aluno1.toString());
 		System.out.println("Média do aluno: " + aluno1.getMediaAluno() + "\nO Aluno foi " 
@@ -227,15 +227,15 @@ public class OrientacaoObj {
 		aluno2.setNomeEscola(escola2);
 		aluno2.setSerieMatriculado(serieMatriculado2);
 		
-		aluno2.setDisciplina1(disciplina1Aluno2);
-		aluno2.setDisciplina2(disciplina2Aluno2);
-		aluno2.setDisciplina3(disciplina3Aluno2);
-		aluno2.setDisciplina4(disciplina4Aluno2);
+		aluno2.getDisciplina().setDisciplina1(disciplina1Aluno2);
+		aluno2.getDisciplina().setDisciplina2(disciplina2Aluno2);
+		aluno2.getDisciplina().setDisciplina3(disciplina3Aluno2);
+		aluno2.getDisciplina().setDisciplina4(disciplina4Aluno2);
 		
-		aluno2.setNota1(Double.parseDouble(nota1Aluno2));
-		aluno2.setNota2(Double.parseDouble(nota2Aluno2));
-		aluno2.setNota3(Double.parseDouble(nota3Aluno2));
-		aluno2.setNota4(Double.parseDouble(nota4Aluno2));
+		aluno2.getDisciplina().setNota1(Double.parseDouble(nota1Aluno2));
+		aluno2.getDisciplina().setNota2(Double.parseDouble(nota2Aluno2));
+		aluno2.getDisciplina().setNota3(Double.parseDouble(nota3Aluno2));
+		aluno2.getDisciplina().setNota4(Double.parseDouble(nota4Aluno2));
 		
 		System.out.println(aluno2.toString());
 		System.out.println("Média do aluno: " + aluno2.getMediaAluno() +"\nO Aluno foi " 
